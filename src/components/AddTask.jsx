@@ -18,12 +18,17 @@ function AddTask(props) {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
-        <input
-          className="outline-slate-950 w-full bg-slate-700 text-left text-slate-200 p-2 rounded-2xl"
-          type="text"
+        <textarea
+          className="outline-slate-950 w-full bg-slate-700 text-left text-slate-200 p-2 rounded-2xl resize-none"
           placeholder="Description..."
           value={description}
-          onChange={(e) => setDescription(e.target.value)}
+          onChange={(e) => {
+            setDescription(e.target.value);
+            e.target.style.height = "auto";
+            e.target.style.height = e.target.scrollHeight + "px";
+          }}
+          rows="3"
+          style={{ overflow: "hidden" }}
         />
         <input
           className="outline-slate-950 w-full bg-slate-700 text-left text-slate-200 p-2 rounded-2xl"
