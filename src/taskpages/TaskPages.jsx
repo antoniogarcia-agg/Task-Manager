@@ -22,7 +22,7 @@ function TaskPages() {
 
   return (
     <div className="w-screen h-screen bg-slate-950 flex justify-center p-7">
-      <div className="space-y-4">
+      <div className="w-[700px] space-y-4">
         <div className="pb-8 flex w-full justify-center items-center relative">
           <button
             onClick={() => onReturnClick()}
@@ -34,7 +34,7 @@ function TaskPages() {
             Task details
           </h1>
         </div>
-        <div className="w-[500px] space-y-6 p-6 rounded 3xl bg-emerald-100 text shadow">
+        <div className="space-y-6 p-6 rounded 3xl bg-emerald-100 text shadow">
           <h1 className="text-left font-bold text-4xl text-slate-950">
             {title}
           </h1>
