@@ -39,7 +39,7 @@ function App() {
   }
 
   return (
-    <div className="overflow-x-hidden min-h-screen bg-slate-950 flex justify-center p-7">
+    <div className="w-full min-h-screen bg-slate-950 flex justify-center p-7">
       <div className="w-[700px] space-y-4">
         <h1 className="mb-8 text-6xl text-slate-400 font-bold text-center">
           Task Manager
