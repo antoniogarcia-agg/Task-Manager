@@ -27,7 +27,7 @@ function AddTask(props) {
             e.target.style.height = "auto";
             e.target.style.height = e.target.scrollHeight + "px";
           }}
-          rows="3"
+          rows="1"
           style={{ overflow: "hidden" }}
         />
         <input
