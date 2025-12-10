@@ -7,6 +7,7 @@ function TaskPages() {
   const title = searchParams.get("title");
   const description = searchParams.get("description");
   const deadline = searchParams.get("deadline");
+  const id = searchParams.get("id");
   const navigate = useNavigate();
 
   function onReturnClick() {
@@ -20,8 +21,17 @@ function TaskPages() {
     return `${day}/${month}/${year}`;
   }
 
+  function onEditTaskClick() {
+    const query = new URLSearchParams();
+    query.set("title", title || "");
+    query.set("description", description || "");
+    query.set("deadline", deadline || "");
+    query.set("id", id || "");
+    navigate(`/taskedit?${query.toString()}`);
+  }
+
   return (
-    <div className="w-screen h-screen bg-slate-950 flex justify-center p-7">
+    <div className="w-full min-h-screen bg-slate-950 flex justify-center p-7">
       <div className="w-[700px] space-y-4">
         <div className="pb-8 flex w-full justify-center items-center relative">
           <button
@@ -46,6 +56,14 @@ function TaskPages() {
           <p className="text-left font-bold text-2xl text-slate-700">
             Deadline: {formatDate(deadline)}
           </p>
+        </div>
+        <div className="justify-end flex">
+          <button
+            onClick={() => onEditTaskClick()}
+            className="cursor-pointer hover:bg-slate-700 hover:text-emerald-100 p-2 rounded-2xl font-bold text-right bg-emerald-100 text-slate-700"
+          >
+            Edit task
+          </button>
         </div>
       </div>
     </div>

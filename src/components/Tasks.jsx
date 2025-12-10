@@ -8,6 +8,7 @@ function Tasks(props) {
     const query = new URLSearchParams();
     query.set("title", task.title);
     query.set("description", task.description);
+    query.set("id", task.id);
     query.set("deadline", task.deadline);
     navigate(`/task?${query.toString()}`);
   }
