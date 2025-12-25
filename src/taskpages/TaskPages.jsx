@@ -11,7 +11,7 @@ function TaskPages() {
   const navigate = useNavigate();
 
   function onReturnClick() {
-    navigate(`/`);
+    navigate(-1);
   }
 
   function formatDate(dateString) {
