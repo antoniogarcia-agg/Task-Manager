@@ -33,16 +33,6 @@
   }
 }
 
-@layer base {
-  html,
-  body,
-  #root {
-    heigth: 100%;
-    overflow-y: scroll;
-    scrollbar-gutter: stable;
-  }
-}
-
 .card {
   padding: 2em;
 }
