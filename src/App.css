@@ -34,7 +34,9 @@
 }
 
 @layer base {
-  html {
+  html,
+  body,
+  #root {
     scrollbar-gutter: stable;
   }
 }
