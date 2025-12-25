@@ -33,6 +33,12 @@
   }
 }
 
+@layer base {
+  html {
+    scrollbar-gutter: stable;
+  }
+}
+
 .card {
   padding: 2em;
 }
