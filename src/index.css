@@ -1,11 +1,15 @@
 @import "tailwindcss";
 @layer base {
   html,
-  body,
-  #root {
-    heigth: 100%;
+  body {
+    height: 100%;
     overflow-y: scroll;
     scrollbar-gutter: stable;
+  }
+
+  #root {
+    height: 100%;
+    overflow: visible; /* IMPORTANT */
   }
 }
 /* :root {
